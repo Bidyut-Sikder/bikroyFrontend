@@ -3,6 +3,10 @@ import axios from "axios";
 import { getEmail, getToken, setEmail } from "../utility/utlity";
 import Cookies from 'js-cookie'
 
+
+const BASEURL = 'https://bikroybackend.onrender.com'
+
+
 const UserStore = create((set) => ({
 
 
@@ -46,7 +50,7 @@ const UserStore = create((set) => ({
 
     userSingleproductDetailRequest: async (productID) => {
 
-        const res = await axios.get(`/api/v1/UserSingleProductDetail/${productID}`)
+        const res = await axios.get(`${BASEURL}/api/v1/UserSingleProductDetail/${productID}`)
         //console.log(res['data']['data'][0])
         if (res['data']['data']) {
             set({ productData: res['data']['data'][0] })
@@ -64,7 +68,7 @@ const UserStore = create((set) => ({
 
     userProductsUpdateRequest: async (productID, reqBody) => {
 
-        const res = await axios.post(`/api/v1/UserProductUpdate/${productID}`, reqBody)
+        const res = await axios.post(`${BASEURL}/api/v1/UserProductUpdate/${productID}`, reqBody)
         // console.log(res['data']['status']==='success')
 
         if (res['data']['status'] === 'success') {
@@ -113,7 +117,7 @@ const UserStore = create((set) => ({
         // const email = getEmail()
 
 
-        let res = await axios.get(`/api/v1/UserLogin/${email}/${password}`)
+        let res = await axios.get(`${BASEURL}/api/v1/UserLogin/${email}/${password}`)
 
         // console.log(res)
         set({ isFormSubmit: false })
@@ -140,7 +144,7 @@ const UserStore = create((set) => ({
 
     userProductsRequest: async () => {
 
-        const res = await axios.get(`/api/v1/UserProducts`)
+        const res = await axios.get(`${BASEURL}/api/v1/UserProducts`)
         //console.log(res['data']['data'])
 
         if (res['data']['data']) {
@@ -183,7 +187,7 @@ const UserStore = create((set) => ({
 
     profileDetailsRequest: async () => {
 
-        const res = await axios.get(`/api/v1/ReadUserProfile`)
+        const res = await axios.get(`${BASEURL}/api/v1/ReadUserProfile`)
 
         if (res['data']['data']) {
             set({ profileDetails: res['data']['data'] })
@@ -193,7 +197,7 @@ const UserStore = create((set) => ({
 
     },
     profileUpdateRequest: async (postBody) => {
-        const res = await axios.post(`/api/v1/UpdateUserProfile`, postBody, { headers: { 'Content-Type': 'multipart/form-data' } })
+        const res = await axios.post(`${BASEURL}/api/v1/UpdateUserProfile`, postBody, { headers: { 'Content-Type': 'multipart/form-data' } })
         // set({ profileDetails: null })
         if (res['data']['status'] === 'success') {
             return true
@@ -216,7 +220,7 @@ const UserStore = create((set) => ({
 
     userLogoutRequest: async () => {
         const token = getToken()
-        let res = await axios.get(`/api/v1/UserLogout`, { headers: { token } })
+        let res = await axios.get(`${BASEURL}/api/v1/UserLogout`, { headers: { token } })
 
         set({ profileDetails: null })
         //profileDetails

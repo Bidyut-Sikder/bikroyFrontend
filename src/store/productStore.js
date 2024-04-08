@@ -3,6 +3,10 @@ import axios from 'axios'
 import { create } from 'zustand'
 import { getToken } from '../utility/utlity'
 
+
+const BASEURL='https://bikroybackend.onrender.com'
+
+
 const productStore = create((set) => ({
     ProductBrandList: null,
     ProductCategoryList: null,
@@ -28,7 +32,7 @@ const productStore = create((set) => ({
     },
     ProductCategoryListRequest: async () => {
         set({ isLoading: true })
-        let res = await axios.get('/api/v1/ProductCategoryList')
+        let res = await axios.get(`${BASEURL}/api/v1/ProductCategoryList`)
         
         if (res['data'].status == 'success') {
 
@@ -58,7 +62,7 @@ const productStore = create((set) => ({
             token: getToken()
         }
         set({ isLoading: true })
-        const res = await axios.post('/api/v1/ProductCreate/', formData)
+        const res = await axios.post(`${BASEURL}/api/v1/ProductCreate/`, formData)
         // const res = await axios.post('/api/v1/ProductCreate/', formData, { headers: headers })
         set({ isLoading: false })
 
@@ -69,7 +73,7 @@ const productStore = create((set) => ({
 
 
     ProductListByKeywordRequest: async (Keyword) => {
-        let res = await axios.get(`/api/v1/ProductListByKeyword/${Keyword}`)
+        let res = await axios.get(`${BASEURL}/api/v1/ProductListByKeyword/${Keyword}`)
         if (res['data'].status == 'success') {
             set({ ProductList: res['data']['data'] })
         }
@@ -79,7 +83,7 @@ const productStore = create((set) => ({
 
 
     ProductDeleteRequest: async (productID) => {
-        let res = await axios.get(`/api/v1/ProductDelete/${productID}`)
+        let res = await axios.get(`${BASEURL}/api/v1/ProductDelete/${productID}`)
 
         if (res['data'].status == 'success') {
             set({ ProductList: res['data']['data'] })
@@ -126,7 +130,7 @@ const productStore = create((set) => ({
 
 
     ProductListByCategoryRequest: async (CategoryID) => {
-        let res = await axios.get(`/api/v1/ProductListByCategory/${CategoryID}`)
+        let res = await axios.get(`${BASEURL}/api/v1/ProductListByCategory/${CategoryID}`)
 
           // console.log(res['data']['data'])
         if (res['data'].status == 'success') {
@@ -141,7 +145,7 @@ const productStore = create((set) => ({
 
 
     ProductDetailsRequest: async (ProductID) => {
-        let res = await axios.get(`/api/v1/ProductDetails/${ProductID}`)
+        let res = await axios.get(`${BASEURL}/api/v1/ProductDetails/${ProductID}`)
         //  console.log(res)
         if (res['data'].status == 'success') {
             set({ ProductDetails: res['data']['data'][0] })
@@ -149,7 +153,7 @@ const productStore = create((set) => ({
     },
 
     AllProductsRequest: async () => {
-        let res = await axios.get(`/api/v1/AllProducts`)
+        let res = await axios.get(`${BASEURL}/api/v1/AllProducts`)
         if (res['data'].status == 'success') {
 
             set({ ProductList: res['data']['data'] })
@@ -157,7 +161,7 @@ const productStore = create((set) => ({
     },
 
     ProductsRequestByTag: async (district, upozila, categoryId) => {
-        let res = await axios.get(`/api/v1/ProductListByTag/${district}/${upozila}/${categoryId}`)
+        let res = await axios.get(`${BASEURL}/api/v1/ProductListByTag/${district}/${upozila}/${categoryId}`)
 
         console.log(res)
         if (res['data'].status == 'success') {

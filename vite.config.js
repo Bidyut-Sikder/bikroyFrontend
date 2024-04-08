@@ -6,22 +6,22 @@ export default defineConfig({
   plugins: [react()],
 
 
-  server: {
+  // server: {
 
-    // headers: {
-    //   'Content-Security-Policy': "img-src 'self' https://photo.teamrabbil.com",
+  //   // headers: {
+  //   //   'Content-Security-Policy': "img-src 'self' https://photo.teamrabbil.com",
 
 
-    // },
-    proxy: {
-      '/api/': {
-        // target: 'http://localhost:5000',
-        target: 'https://bikroybackend.onrender.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/api/')
-      }
-    }
-  }
+  //   // },
+  //   proxy: {
+  //     '/api/': {
+  //       // target: 'http://localhost:5000',
+  //       target: 'https://bikroybackend.onrender.com',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, '/api/')
+  //     }
+  //   }
+  // }
 })
 
 
