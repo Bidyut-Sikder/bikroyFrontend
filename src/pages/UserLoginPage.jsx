@@ -28,7 +28,8 @@ const UserLoginPage = () => {
 
         if (res) {
             toast.success('Login successfull.')
-            navigate('/user')
+            location.replace('/user');
+           // navigate('/user')
         } else {
             toast.error('Invalid credentials!')
         }

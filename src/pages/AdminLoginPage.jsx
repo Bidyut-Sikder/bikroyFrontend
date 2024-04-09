@@ -31,7 +31,8 @@ const AdminLoginPage = () => {
 
         if (res) {
             toast.success('Login successfull.')
-             navigate('/dashboard')
+            // navigate('/dashboard')
+            location.replace('/dashboard');
         } else {
             // console.log('fdf')
             toast.error('Invalid credentials!')
