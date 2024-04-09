@@ -164,7 +164,7 @@ const productStore = create((set) => ({
     ProductsRequestByTag: async (district, upozila, categoryId) => {
         let res = await axios.get(`${BASEURL}/api/v1/ProductListByTag/${district}/${upozila}/${categoryId}`)
 
-        console.log(res)
+      
         if (res['data'].status == 'success') {
             set({ ProductList: res['data']['data'] })
         }
