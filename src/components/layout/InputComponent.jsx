@@ -8,8 +8,8 @@ import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import SubmitButton from './SubmitButton';
 
-const InputComponent = ({ loading,onChangeHandler,submitHndler }) => {
-    
+const InputComponent = ({ loading, onChangeHandler, submitHndler, text }) => {
+
     // const navigate = useNavigate()
     // const { userLoginRequest } = UserStore()
 
@@ -37,7 +37,9 @@ const InputComponent = ({ loading,onChangeHandler,submitHndler }) => {
     // }
 
 
-
+    const onsubmitHandler = (e) => {
+        e.preventDefault()
+    }
 
 
     return (
@@ -45,12 +47,12 @@ const InputComponent = ({ loading,onChangeHandler,submitHndler }) => {
         <div className='h-screen flex items-center justify-center'>
 
             <div className="w-full max-w-sm">
-                <form className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4">
+                <form onSubmit={onsubmitHandler} className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4">
                     <div className="mb-4">
                         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor="username">
                             Email
                         </label>
-                        <input onChange={(e) => onChangeHandler('email', e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
+                        <input onChange={(e) => onChangeHandler('email', e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="email" placeholder="Username" />
                     </div>
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
@@ -65,7 +67,7 @@ const InputComponent = ({ loading,onChangeHandler,submitHndler }) => {
                             {submit}
                         </button> */}
 
-                        <SubmitButton loading={loading} onClick={submitHndler} text='Login' />
+                        <SubmitButton loading={loading} onClick={submitHndler} text={text} />
 
 
                         {/* <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">

@@ -150,7 +150,22 @@ const UserStore = create((set) => ({
         return res.data['status'] === 'success'
     },
 
+    userSignUpRequest: async (reqBody) => {
 
+        set({ isFormSubmit: true })
+  
+        let res = await axios.post(`${BASEURL}/api/v1/SignUp/`,reqBody)
+
+        // console.log(res.data['token'])
+
+        setCookie('token', res.data['token'], 7);
+
+
+        // console.log(res)
+
+        set({ isFormSubmit: false })
+        return res.data['status'] === 'success'
+    },
 
 
 
