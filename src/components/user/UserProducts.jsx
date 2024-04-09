@@ -5,7 +5,7 @@ import productStore from '../../store/productStore';
 
 const UserProducts = () => {
     const { userProductsRequest, userProducts } = UserStore()
-    const { ProductDeleteRequest } = productStore()
+    const { ProductDeleteRequest } = UserStore()
     const [render, setRender] = useState(0)
 
 

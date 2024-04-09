@@ -4,9 +4,10 @@ import { create } from 'zustand'
 import { getToken } from '../utility/utlity'
 
 
-const BASEURL='https://bikroybackend.onrender.com'
+// const BASEURL = 'http://localhost:5000'
+ const BASEURL='https://bikroybackend.onrender.com'
 
-
+ 
 const productStore = create((set) => ({
     ProductBrandList: null,
     ProductCategoryList: null,
@@ -57,17 +58,16 @@ const productStore = create((set) => ({
 
     },
 
-    ProductCreateRequest: async (formData) => {
-        const headers = {
-            token: getToken()
-        }
-        set({ isLoading: true })
-        const res = await axios.post(`${BASEURL}/api/v1/ProductCreate/`, formData)
-        // const res = await axios.post('/api/v1/ProductCreate/', formData, { headers: headers })
-        set({ isLoading: false })
+    // ProductCreateRequest: async (formData) => {
+    //     //const token = Cookies.get("token") 
 
-        return res['data']['status']==='success'
-    },
+    //     set({ isLoading: true })
+    //     const res = await axios.post(`${BASEURL}/api/v1/ProductCreate/`, formData,)
+    //     // const res = await axios.post('/api/v1/ProductCreate/', formData, { headers: headers })
+    //     set({ isLoading: false })
+
+    //     return res['data']['status']==='success'
+    // },
 
     ///////////////////////
 
@@ -82,13 +82,14 @@ const productStore = create((set) => ({
 
 
 
-    ProductDeleteRequest: async (productID) => {
-        let res = await axios.get(`${BASEURL}/api/v1/ProductDelete/${productID}`)
+    // ProductDeleteRequest: async (productID) => {
+    //     const token = Cookies.get("token") 
+    //     let res = await axios.get(`${BASEURL}/api/v1/ProductDelete/${productID}`,{ headers: { token:token }})
 
-        if (res['data'].status == 'success') {
-            set({ ProductList: res['data']['data'] })
-        }
-    },
+    //     if (res['data'].status == 'success') {
+    //         set({ ProductList: res['data']['data'] })
+    //     }
+    // },
 
 
 

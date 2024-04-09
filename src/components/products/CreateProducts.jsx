@@ -630,9 +630,11 @@ import "react-quill/dist/quill.snow.css";
 
 import productStore from '../../store/productStore';
 import toast from 'react-hot-toast';
+import UserStore from '../../store/userStore';
 
 const CreateProducts = () => {
-    const { ProductCreateRequest, ProductCategoryList, ProductCategoryListRequest } = productStore()
+    const {  ProductCategoryList, ProductCategoryListRequest } = productStore()
+    const {ProductCreateRequest}=UserStore()
     const [Description, setDescription] = useState("");
     const [categories, setCategories] = useState([]);
 

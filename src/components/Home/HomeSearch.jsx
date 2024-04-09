@@ -48,7 +48,7 @@ const HomeSearch = () => {
     return (
 
         < div className="block md:flex justify-center items-center w-full mt-4" >
-            <div className="block">
+            <div className="block max-[700px]:px-3">
                 <div className="pb-5"><label className="relative block  w-auto md:w-[600px] truncate ">
                     <form onSubmit={onSubmitFormHandler}>
 

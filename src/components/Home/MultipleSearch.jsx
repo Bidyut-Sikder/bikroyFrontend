@@ -70,9 +70,9 @@ const MultipleSearch = () => {
 
     return (
         <div className="bg-[#a855f7] py-3">
-            <div className="container mx-auto">
-                <div className="block md:mt-4 ">
-                    <div className="mx-auto md:flex justify-center gap-4"><span className="block mb-3 md:mb-0  md:w-[200px]"><span
+            <div className="container  mx-auto">
+                <div className="block max-[700px]:px-3 md:mt-4 ">
+                    <div className="mx-auto  md:flex justify-center gap-4"><span className="block mb-3 md:mb-0  md:w-[200px]"><span
                         className="text-sm text-[#fff] pb-1 block">Select District</span>
 
 
