@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 const BASEURL = 'https://bikroybackend.onrender.com'
 // const BASEURL = 'http://localhost:5000'
 const token = Cookies.get("token")
-console.log(token)
+
 const AdminStore = create((set) => ({
 
 
