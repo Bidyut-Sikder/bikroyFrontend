@@ -11,8 +11,24 @@ const UserProducts = () => {
 
     const deleteProduct = async (id) => {
         //console.log(id)
-        await ProductDeleteRequest(id);
-        setRender(render + 1)
+                Swal.fire({
+            title: "Do you want to Delete the Product?",
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Delete",
+            denyButtonText: `Don't Delete`
+        }).then(async(result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                await ProductDeleteRequest(id);
+                setRender(render + 1)
+                Swal.fire("Saved!", "", "success");
+            } else if (result.isDenied) {
+                Swal.fire("Product is not Deleted", "", "info");
+            }
+        });
+        //await ProductDeleteRequest(id);
+       // setRender(render + 1)
     }
 
 
