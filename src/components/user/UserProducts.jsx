@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import UserStore from '../../store/userStore';
 import { Link } from 'react-router-dom';
 import productStore from '../../store/productStore';
+import Swal from 'sweetalert2';
 
 const UserProducts = () => {
     const { userProductsRequest, userProducts } = UserStore()
