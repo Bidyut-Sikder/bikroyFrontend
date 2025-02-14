@@ -29,31 +29,29 @@ const ImageGallary = () => {
 
   return (
     <div className="max-w-[500px] mx-auto">
-    <ImageGallery
-      autoPlay={false}
-      items={images}
-      showPlayButton={false}
-      showFullscreenButton={false}
-      showThumbnails={true}
-      renderItem={(item) => (
-        <div className="h-[300px] md:h-[400px] flex justify-center items-center overflow-hidden bg-gray-100 rounded-lg">
-          <img src={item.original} alt="Product" />
-        </div>
-      )}
-      additionalClass="custom-gallery"
-    />
-  </div>
+      <ImageGallery
+        autoPlay={false}
+        items={images}
+        showPlayButton={false}
+        showFullscreenButton={false}
+        showThumbnails={true}
+        renderItem={(item) => (
+          <div className="h-[300px] md:h-[400px] flex justify-center items-center overflow-hidden bg-gray-100 rounded-lg">
+            <img
+              src={item.original}
+              alt="Product"
+              style={{
+                objectFit: "cover", // Prevents cropping by making sure the image fits inside the container
+                width: "300px", // Ensure image scales to container width
+                height: "300px", // Ensure image scales to container height
+              }}
+            />
+          </div>
+        )}
+        additionalClass="custom-gallery"
+      />
+    </div>
   );
 };
 
 export default ImageGallary;
-
-
-
-
-
-
-
-
-
-

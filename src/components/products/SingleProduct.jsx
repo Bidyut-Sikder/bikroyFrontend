@@ -1,16 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ImageGallary from "./ImageGallary";
 import productStore from "../../store/productStore";
 import parse from "html-react-parser";
 
 const SingleProduct = () => {
-  const { ProductDetails, AllProductsRequest } = productStore();
-
-  useEffect(() => {
-    (async () => {
-      await AllProductsRequest();
-    })();
-  }, []);
+  const { ProductDetails } = productStore();
 
   return (
     <div>

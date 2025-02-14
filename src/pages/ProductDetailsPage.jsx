@@ -11,8 +11,12 @@ import ProductSearch from "../components/products/ProductSearch";
 const ProductDetailsPage = () => {
   const { productID } = useParams();
 
-  const { ProductDetails, ProductDetailsRequest, ProductCategoryListRequest } =
-    productStore();
+  const {
+    ProductDetails,
+
+    ProductDetailsRequest,
+    ProductCategoryListRequest,
+  } = productStore();
   useEffect(() => {
     (async () => {
       await ProductDetailsRequest(productID);
@@ -20,6 +24,8 @@ const ProductDetailsPage = () => {
       await ProductCategoryListRequest();
     })();
   }, []);
+
+
 
   return (
     <Layout>
@@ -51,6 +57,7 @@ const ProductDetailsPage = () => {
                           </div>
                         </div>
                       ) : (
+                   
                         <SingleProduct />
                       )}
                     </div>

@@ -36,6 +36,7 @@ const productStore = create((set) => ({
         label: item.categoryName,
         categoryImg: item.categoryImg,
       }));
+
       set({ ProductCategoryList: totalCategories });
     }
   },
@@ -51,6 +52,8 @@ const productStore = create((set) => ({
 
   ProductListByKeywordRequest: async (Keyword) => {
     set({ isLoading: true });
+    set({ ProductList: [] });
+
     let res = await axios.get(
       `${BASEURL}/api/v1/ProductListByKeyword/${Keyword}`
     );
@@ -66,6 +69,7 @@ const productStore = create((set) => ({
 
   ProductListByCategoryRequest: async (CategoryID) => {
     set({ isLoading: true });
+    set({ ProductList: [] });
     let res = await axios.get(
       `${BASEURL}/api/v1/ProductListByCategory/${CategoryID}`
     );
@@ -94,17 +98,18 @@ const productStore = create((set) => ({
 
   AllProductsRequest: async () => {
     set({ isLoading: true });
+
     let res = await axios.get(`${BASEURL}/api/v1/AllProducts`);
     if (res["data"].status == "success") {
-      set({ isLoading: false });
       set({ ProductList: res["data"]["data"] });
+      set({ isLoading: false });
     } else {
       set({ isLoading: false });
-      set({ ProductList: [] });
     }
   },
 
   ProductsRequestByTag: async (district, upozila, categoryId) => {
+    set({ ProductList: [] });
     let res = await axios.get(
       `${BASEURL}/api/v1/ProductListByTag/${district}/${upozila}/${categoryId}`
     );
