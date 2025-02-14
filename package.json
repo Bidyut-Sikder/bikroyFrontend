@@ -1,6 +1,5 @@
 {
   "name": "vite-project",
-
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,6 +19,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "carousel": "^0.0.3",
+    "framer-motion": "^12.4.2",
     "html-react-parser": "^5.0.11",
     "js-cookie": "^3.0.5",
     "keep-react": "^1.2.0",
