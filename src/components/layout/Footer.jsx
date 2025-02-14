@@ -3,10 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer bg-[#192132] py-8 px-2">
-
-
       <div className="container mx-auto mb-5">
-
         {/* <div className="footer__section grid md:grid-cols-3 gap-10">
           <div className="item">
             <div className="logo__section">
@@ -146,77 +143,144 @@ const Footer = () => {
           </div>
         </div> */}
 
+        <div className="footer__section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+          <div className="item">
+            <div className="logo__section">
+              <div className="logo__section w-full flex justify-between items-center mb-4">
+                <a href="/">
+                  <img src="d" alt="" className="inline-block" />
+                </a>
+              </div>
+              <div>
+                <p className="text-slate-300 text-xs sm:text-sm">
+                  This website is built with ReactJS, ExpressJS, NodeJS, MongoDB
+                  &amp; Tailwind CSS. If you have any questions, you can visit
+                  <strong className="text-[#c084fc]">
+                    <a
+                      target="blank"
+                      href="https://portfolio-blush-tau-45.vercel.app"
+                    >
+                      bidyutsikder.com
+                    </a>
+                  </strong>{" "}
+                  or email:{" "}
+                  <a
+                    href="mailto:bidyutsikder2001@gmail.com"
+                    class="text-[#c084fc]"
+                  >
+                    bidyutsikder2001@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
 
-<div className="footer__section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+          <div className="item">
+            <div className="logo__section">
+              <h3 className="text-slate-100 text-lg font-semibold">
+                Important Links
+              </h3>
+              <ul className="mt-3 space-y-2">
+                <li className="text-slate-300 text-xs sm:text-sm">
+                  <a href="/" class="inline-block py-1">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 16 16"
+                      class="inline text-[#FBBF24] mb-1 mr-2"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                    </svg>
+                    Home
+                  </a>
+                </li>
+                <li className="text-slate-300 text-xs sm:text-sm">
+                  <a href="/all-ads/1" class="inline-block py-1">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 16 16"
+                      class="inline text-[#FBBF24] mb-1 mr-2"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                    </svg>
+                    All Ads
+                  </a>
+                </li>
+                <li className="text-slate-300 text-xs sm:text-sm">
+                  <a href="/profile" class="inline-block py-1">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 16 16"
+                      class="inline text-[#FBBF24] mb-1 mr-2"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                    </svg>
+                    Post Your Ads
+                  </a>
+                </li>
+                <li className="text-slate-300 text-xs sm:text-sm">
+                  <a href="/profile" class="inline-block py-1">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 16 16"
+                      class="inline text-[#FBBF24] mb-1 mr-2"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                    </svg>
+                    My Account
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-  <div className="item">
-    <div className="logo__section">
-      <div className="logo__section w-full flex justify-between items-center mb-4">
-        <a href="/"><img src="d" alt="" className="inline-block" /></a>
-      </div>
-      <div>
-        <p className="text-slate-300 text-xs sm:text-sm">
-          This website is built with ReactJS, ExpressJS, NodeJS, MongoDB &amp; Tailwind CSS. 
-          If you have any questions, you can visit 
-          <strong className="text-[#c084fc]">
-            <a target="blank" href="https://portfolio-blush-tau-45.vercel.app">bidyutsikder.com</a>
-          </strong> or email: <a href="mailto:bidyutsikder2001@gmail.com" class="text-[#c084fc]">bidyutsikder2001@gmail.com</a>
-        </p>
-      </div>
-    </div>
-  </div> 
-
-
-  <div className="item">
-    <div className="logo__section">
-      <h3 className="text-slate-100 text-lg font-semibold">Important Links</h3>
-      <ul className="mt-3 space-y-2">
-        <li className="text-slate-300 text-xs sm:text-sm">
-          <a href="/" class="inline-block py-1">
-            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" class="inline text-[#FBBF24] mb-1 mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
-            </svg>Home
-          </a>
-        </li>
-        <li className="text-slate-300 text-xs sm:text-sm">
-          <a href="/all-ads/1" class="inline-block py-1">
-            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" class="inline text-[#FBBF24] mb-1 mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
-            </svg>All Ads
-          </a>
-        </li>
-        <li className="text-slate-300 text-xs sm:text-sm">
-          <a href="/profile" class="inline-block py-1">
-            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" class="inline text-[#FBBF24] mb-1 mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
-            </svg>Post Your Ads
-          </a>
-        </li>
-        <li className="text-slate-300 text-xs sm:text-sm">
-          <a href="/profile" class="inline-block py-1">
-            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" class="inline text-[#FBBF24] mb-1 mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
-            </svg>My Account
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-  <div className="item">
-    <div className="logo__section">
-      <h3 className="text-slate-100 text-lg font-semibold">Newsletter</h3>
-      <p className="text-slate-300 text-xs sm:text-sm mt-3">Sign up and receive the latest tips via email.</p>
-      <label className="block mt-2">
-        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-300">Email</span>
-        <input type="email" name="email" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="you@example.com" />
-      </label>
-      <a href="#" className="btn-primary inline-block py-2 px-8 rounded-lg bg-[#7e22ce] text-slate-200 hover:text-slate-50 mt-3">Subscribe</a>
-    </div>
-  </div>
-</div>
-
+          <div className="item">
+            <div className="logo__section">
+              <h3 className="text-slate-100 text-lg font-semibold">
+                Newsletter
+              </h3>
+              <p className="text-slate-300 text-xs sm:text-sm mt-3">
+                Sign up and receive the latest tips via email.
+              </p>
+              <label className="block mt-2">
+                <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-300">
+                  Email
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                  placeholder="you@example.com"
+                />
+              </label>
+              <a
+                href="#"
+                className="btn-primary inline-block py-2 px-8 rounded-lg bg-[#7e22ce] text-slate-200 hover:text-slate-50 mt-3"
+              >
+                Subscribe
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <hr />

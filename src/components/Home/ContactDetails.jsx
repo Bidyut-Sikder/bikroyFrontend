@@ -21,7 +21,7 @@ const ContactDetails = () => {
                         <h2 className="mt-5 text-lg font-bold text-slate-700">Phone</h2>
                         <p className="text-slate-500 text-md mb-2">If you have to need any help you can call any time. Our
                             teem spend there time for give best service.</p>
-                        <p className="text-slate-500 text-sm font-semibold">+88 01814-33135*</p>
+                        <p className="text-slate-500 text-sm font-semibold">+88 01733463493</p>
                     </div>
                 </div>
                 <div className="item p-10 rounded-lg  transition-primary cursor-pointer text-center">
@@ -38,7 +38,7 @@ const ContactDetails = () => {
                         <h2 className="mt-5 text-lg font-bold text-slate-700">Email</h2>
                         <p className="text-slate-500 text-md mb-2">If you have want to send massage, You can send email us.
                             We shall back to response very quickly!</p>
-                        <p className="text-slate-500 text-sm font-semibold">amitbd599@gmail.com</p>
+                        <p className="text-slate-500 text-sm font-semibold">bidyutsikder2001@gmail.com</p>
                     </div>
                 </div>
                 <div className="item p-10 rounded-lg  transition-primary cursor-pointer text-center">
@@ -54,8 +54,8 @@ const ContactDetails = () => {
                     <div className="text__section">
                         <h2 className="mt-5 text-lg font-bold text-slate-700">Location</h2>
                         <p className="text-slate-500 text-md mb-2">Our Company has located in Chittagong, Bangladesh. please
-                            visit https://amitjs.com for more info.</p>
-                        <p className="text-slate-500 text-sm font-semibold">Chittagong, Bangladesh</p>
+                            visit https://bidyutsikder.vercel.app for more info.</p>
+                        <p className="text-slate-500 text-sm font-semibold">Dhaka, Bangladesh</p>
                     </div>
                 </div>
             </div>

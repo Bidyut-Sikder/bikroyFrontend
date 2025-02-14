@@ -17,7 +17,7 @@ const CategoriesSkeleton = () => {
                                 <div key={i} className="col-6 col-lg-8r text-center col-md-8r p-2">
                                     <div className="card h-100 rounded-3 bg-white">
                                         <div className="card-body">
-                                            <Lottie className="w-100" animationData={animationData} loop={true} />
+                                            {/* <Lottie className="w-100" animationData={animationData} loop={true} /> */}
                                             <Skeleton count={1} />
                                         </div>
                                     </div>

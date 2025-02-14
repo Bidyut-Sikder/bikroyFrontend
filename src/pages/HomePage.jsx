@@ -11,12 +11,7 @@ import MultipleSearch from "../components/Home/MultipleSearch";
 const HomePage = () => {
   const {
     ProductCategoryListRequest,
-    ProductSearchByCategory,
-    ProductList,
-    ProductListByKeywordRequest,
-    ProductDetails,
-    categoryName,
-    location,
+
   } = productStore();
 
   useEffect(() => {

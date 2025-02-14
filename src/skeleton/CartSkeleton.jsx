@@ -1,7 +1,7 @@
 import Lottie from 'lottie-react';
 import React from 'react';
 import Skeleton from 'react-loading-skeleton';
-import ImagePlaceholder from "../assets/images/image.json"
+// import ImagePlaceholder from "../assets/images/image.json"
 
 const CartSkeleton = () => {
     return (

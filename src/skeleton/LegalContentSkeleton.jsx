@@ -1,23 +1,14 @@
 import React from 'react';
-import Skeleton from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const LegalContentSkeleton = () => {
     return (
-        <div className='container mt-3'>
-            <div className="row">
-                <div className="col-md-12">
-                    <div className="card p-4">
-                        {
-                            Array.from({ length: 16 }).map((item ,i)=> {
-                                return (
-                                    <Skeleton key={i} count={3} />
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>
+       
+        <div style={{ display: 'flex' }}>
+        <Skeleton containerClassName="flex-1" />
+
+      </div>
     );
 };
 
