@@ -39,7 +39,7 @@ const ContactDetails = () => {
                         <p className="text-slate-500 text-md mb-2">If you have want to send massage, You can send email us.
                             We shall back to response very quickly!</p>
                         <p className="text-slate-500 text-sm font-semibold">bidyutsikder2001@gmail.com</p>
-                    </div>
+                    </div> 
                 </div>
                 <div className="item p-10 rounded-lg  transition-primary cursor-pointer text-center">
                     <div className="icon__section  inline-block  rounded-lg shadow-lg"><svg stroke="currentColor"
