@@ -33,6 +33,26 @@
 
 
 
+/* Make previous and next buttons smaller */
+.custom-gallery .image-gallery-prev, 
+.custom-gallery .image-gallery-next {
+  width: 30px; /* Adjust width */
+  height: 30px; /* Adjust height */
+  background-size: 20px; /* Adjust icon size */
+}
+
+/* Optionally add some padding or margin */
+.custom-gallery .image-gallery-prev,
+.custom-gallery .image-gallery-next {
+  margin: 5px; /* Adjust spacing around buttons */
+  padding: 5px; /* Adjust padding */
+}
+
+/* You can also change the button color */
+.custom-gallery .image-gallery-prev svg,
+.custom-gallery .image-gallery-next svg {
+  fill: #333; /* Customize the icon color */
+}
 
 
 
