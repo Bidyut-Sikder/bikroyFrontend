@@ -102,14 +102,20 @@ const SingleProduct = () => {
                       "-" +
                       new Date(ProductDetails.createdAt).getFullYear()}
                   </span>
+                  <div className="brand">
+                    <span className="text-slate-500 text-sm ">Email:</span>
+                    <span className="text-slate-600 text-sm font-semibold ml-2">
+                      {ProductDetails.user.email}
+                    </span>
+                  </div>
                 </div>
 
-                <div className="brand">
+                {/* <div className="brand">
                   <span className="text-slate-500 text-sm ">Email:</span>
                   <span className="text-slate-600 text-sm font-semibold ml-2">
                     {ProductDetails.user.email}
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="description mt-6">

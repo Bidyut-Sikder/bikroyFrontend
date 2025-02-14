@@ -76,15 +76,17 @@ const SideCategories = ({ user }) => {
                             <p className="text-slate-500 text-xs mb-2">Sales by <span className=" text-slate-700 text-base font-semibold">{`${user.firstName} ${user.lastName}`} </span></p>
                             <hr />
                             <div className="mt-5 mb-2">
-                                <p style={{ background: '#6366F1', padding: '5px' }} className="text-white text-base text-[14px] bg-[#6366F1] inline-block px-4 py-0 rounded-full">
+                                <p style={{ background: '#6366F1', padding: '5px' }} 
+                                className="text-white text-base text-[14px] bg-[#6366F1] inline-block px-4 py-0
+                                 rounded">
                                     <svg
                                         stroke="currentColor" fill="currentColor" strokeWidth="10" viewBox="0 0 512 512"
-                                        className="inline text-[12px] mb-1 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        className="inline text-[12px] mb-1 mr-1 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z">
                                         </path>
                                     </svg>
-                                    Number For Call:</p>
+                                    Call:</p>
                                 <p className="mt-2 px-4 text-slate-600 font-semibold">{user.phone}</p>
                             </div>
                             <hr />
