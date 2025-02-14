@@ -22,7 +22,7 @@ const Admin = () => {
         target="blank"
 
           href=" https://bidyutsikder.vercel.app"
-          className=" text-red-200 font-normal text-sm"
+          className=" text-teal-700 underline font-normal text-sm"
         >
           Portfolio
         </a>
